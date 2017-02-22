@@ -31,7 +31,6 @@ TOC :
     padding: 10px;
     width: 100%;
   }
-
   #about .bio-left {
     min-height: 600px;
     height: auto;
@@ -43,6 +42,7 @@ TOC :
     padding: 20px;
     height: auto;
   }
+
 
 }
 
@@ -124,10 +124,6 @@ TOC :
       top: 0;
       right: 0;
    }
-   
-   .show-menu {
-    padding-left: 0;
-   }
 
    #m-nav > a {
      background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
@@ -188,7 +184,7 @@ TOC :
       display: block;
       height: auto;      
       margin: 0 auto; 
-      padding: 2px 20px;            
+      padding: 0 4%;           
       text-align: left;
       border-bottom: 1px solid #2D2E34;
       border-bottom-style: dotted; 
