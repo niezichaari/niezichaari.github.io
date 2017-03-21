@@ -2,3 +2,6 @@ AddType text/html .shtml
 AddHandler server-parsed .shtml
 ErrorDocument 404 /new404.html
 XBitHack on
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
