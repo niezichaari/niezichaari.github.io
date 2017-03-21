@@ -1,0 +1,4 @@
+AddType text/html .shtml
+AddHandler server-parsed .shtml
+ErrorDocument 404 /new404.html
+XBitHack on
