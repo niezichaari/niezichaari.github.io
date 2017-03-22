@@ -1,9 +1,19 @@
-RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
-RewriteRule .* ? [F,L]
-AddType text/html .shtml
-AddHandler server-parsed .shtml
-ErrorDocument 404 /new404.html
-XBitHack on
-<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
-Header set Cache-Control "max-age=2628000, public"
-</filesMatch>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 months"
+ExpiresByType text/css "access plus 2 weeks"
+ExpiresByType text/html "access plus 7200 seconds"
+ExpiresByType text/javascript "access plus 2 weeks"
+ExpiresByType image/jpg "access plus 2 weeks"
+ExpiresByType image/jpeg "access plus 2 weeks"
+ExpiresByType image/png "access plus 2 weeks"
+ExpiresByType image/gif "access plus 2 weeks"
+ExpiresByType image/svg+xml "access plus 4 weeks"
+
+AddType image/ico .ico
+ExpiresByType image/ico "access plus 1 years"
+
+
+
+
+</IfModule>
