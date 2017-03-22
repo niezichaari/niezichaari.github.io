@@ -11,7 +11,7 @@ ExpiresByType image/gif "access plus 2 weeks"
 ExpiresByType image/svg+xml "access plus 4 weeks"
 
 AddType text/min .min.css
-ExpiresByType image/min "access plus 2 weeks"
+ExpiresByType text/min "access plus 2 weeks"
 AddType image/ico .ico
 ExpiresByType image/ico "access plus 1 years"
 
