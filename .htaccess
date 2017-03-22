@@ -23,8 +23,12 @@ ExpiresByType image/ico "access plus 1 years"
 Header set Cache-Control "max-age=86400", must-revalidate"
 </filesMatch>
 </ifmodule>
-<ifmodule mod_rewrite.c>
-RewriteEngine On
-RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
-RewriteRule .* ? [F,L]
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+SetEnvIfNoCase User-Agent ^libwww-perl bad_bot
+
+Order Allow,Deny
+Allow from ALL
+Deny from env=bad_bot
 </ifmodule>
