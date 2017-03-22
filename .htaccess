@@ -18,3 +18,13 @@ ExpiresByType image/ico "access plus 1 years"
 
 
 </ifmodule>
+<ifmodule mod_headers.c>
+<filesMatch ".(css|png|gif)$">
+Header set Cache-Control "max-age=86400", must-revalidate"
+</filesMatch>
+</ifmodule>
+<ifmodule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
+RewriteRule .* -[F,L]
+</ifmodule>
